@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Prata&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Prata', serif;
+    }
+    p {
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+    }
+    a {
+        text-decoration: none;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+    }
+    li {
+        list-style: none;
+    }
+    background: black;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    .list-container {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            li {
+                margin: 0 10px;
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+    .touch-btn {
+        a {
+            color: black;
+            background: yellow;
+            padding: 10px 20px;
+        }
+    }
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+.hero-section {
+    padding: 30px 50px;
+    margin-top: 40px;
+    .hero-text {
+        width: 60%;
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: 1.5px;
+        }
+        p {
+            font-size: 1.4rem;
+            line-height: 1.5;
+        }
+    }
+    .hero-icons {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        column-gap: 120px;
+        margin: 40px 0;
+    }
+    .hero-images {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        .spense-container {
+            width: 45%;
+            img {
+                width: 100%;
+            }
+            .caption {
+                display: flex;
+                align-items: center;
+                margin: 20px 0;
+                i {
+                    margin-left: 10px;
+                }
+            }
+            p {
+                letter-spacing: 1px;
+                font-size: 18px;
+            }
+        }
+        .yelpcamp-container {
+            width: 45%;
+            img {
+                width: 100%;
+            }
+            .caption {
+                display: flex;
+                align-items: center;
+                margin: 20px 0;
+                i {
+                    margin-left: 10px;
+                }
+            }
+            p {
+                letter-spacing: 1px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.info-section {
+    background: #b9a2a1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 40px 50px;
+    p {
+        letter-spacing: 1px;
+        font-size: 18px;
+    }
+    .col-left {
+        width: 45%;
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+    .col-right {
+        width: 45%;
+    }
+}
+
+.cta-section {
+    width: 50%;
+    padding: 30px 50px;
+    h2 {
+        font-size: 2.4rem;
+        margin-bottom: 10px;
+    }
+    p {
+        letter-spacing: 1px;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    a {
+        color: black;
+        background: yellow;
+        padding: 10px 20px;
+    }
+}
+
+footer {
+    padding: 30px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #b9a2a1;
+}
+
+@media only screen and(max-width:768px) {
+    body {
+        min-width: 100vh;
+    }
+    nav {
+        width: 100%;
+        padding: 20px;
+        .list-container {
+            display: none;
+        }
+        .touch-btn {
+            display: none;
+        }
+        .hamburger-menu {
+            display: block;
+        }
+    }
+    .hero-section {
+        .hero-text {
+            width: 100%;
+            h1 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+        .hero-icons {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            row-gap: 30px;
+        }
+        .hero-images {
+            display: flex;
+            flex-direction: column;
+            .spense-container {
+                width: 100%;
+            }
+            .yelpcamp-container {
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+    }
+    .info-section {
+        display: flex;
+        flex-direction: column;
+        .col-left,
+        .col-right {
+            width: 100%;
+        }
+    }
+    .cta-section {
+        width: 80%;
+        h2 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .hero-section {
+        .hero-text {
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .hero-icons {
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 0;
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:1350px) {
+    .hero-section {
+        .hero-icons {
+            column-gap: 60px;
+        }
+    }
+}
+
+@media only screen and(max-width:1000px) {
+    .hero-section {
+        .hero-icons {
+            column-gap: 30px;
+        }
+    }
+}
+
+@media only screen and(max-width:950px) {
+    .hero-section {
+        .hero-icons {
+            column-gap: 20px;
+        }
+    }
+}
+
+@media only screen and(max-width:850px) {
+    .hero-section {
+        .hero-icons {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            column-gap: 100px;
+            row-gap: 20px;
+        }
+    }
+}
